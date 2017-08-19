@@ -1,0 +1,44 @@
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+body{
+    background-image: url("https://wallpaperscraft.com/image/people_hands_concert_music_crowd_80452_1920x1080.jpg");
+    padding-left:75px;
+    padding-right:75px;
+    padding-top:50px;
+    padding-bottom:75px;
+    background-color:#888;
+    font-family: 'Monoton', cursive;
+    background-repeat: no-repeat;
+    background-color:#000;
+}
+
+#jumbo {
+   background: rgb(0, 0, 250);
+   background: rgba(0, 0, 75, 0.4);
+   padding-top:-30px;
+   padding-bottom:-30px;
+   margin-right:100px;
+   margin-left:100px;
+}
+
+#results{
+  color:white;
+}
+
+.modal.modal-wide .modal-dialog {
+  width: 90%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+
+body { text-align: center; }
+body p { 
+  max-width: 400px; 
+  margin: 20px auto; 
+}
+#tallModal .modal-body p { margin-bottom: 900px }

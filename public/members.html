@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MeetApp</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <script
+		src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+
+		<!--Google Fonts 
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">-->
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/members.js"></script>
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/logout">
+        Logout
+      </a>
+        <form class="navbar-form navbar-right">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <input type="text" class="form-control" id="zip-input" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default" id="add-zip">Submit</button>
+            </div>
+            <div class="col-sm-6">
+              <h2>Welcome <span class="member-name"></span></h2>
+            </div>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+
+    </div>
+  </div>
+
+  <div class="jumbotron" id="jumbo">
+    <div class="container">
+      <div id="results" class="text-center">
+      </div>
+      <div id="fakeMatches1">
+        <div class="row">
+          <div class="col-sm-6 text-center">
+            <img src="images/pic1.jpg" alt="Smiley face" height="100" width="100">
+          </div>
+          <div class="col-sm-6">
+            <ul>
+              <li>@Sexymama69</li>
+              <li>matilda patterson</li>
+              <li>21</li>
+            </ul>
+            <a data-toggle="modal" href="#normalModal" class="btn btn-default" id="modal button">Chat!</a>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-6 text-center">
+            <img src="images/pic2.jpg" alt="Smiley face" height="100" width="100">
+          </div>
+          <div class="col-sm-6">
+            <ul>
+              <li>@booboo3</li>
+              <li>jacky davis</li>
+              <li>22</li>
+            </ul>
+            <a data-toggle="modal" href="#normalModal" class="btn btn-default" id="modal button">Chat!</a>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-6 text-center">
+            <img src="images/pic3.jpg" alt="Smiley face" height="100" width="100">
+          </div>
+          <div class="col-sm-6">
+            <ul>
+              <li>@hairylarry</li>
+              <li>larry burgerson</li>
+              <li>44</li>
+            </ul>
+            <a data-toggle="modal" href="#normalModal" class="btn btn-default" id="modal button">Chat!</a>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-6 text-center">
+            <img src="images/pic4.jpg" alt="Smiley face" height="100" width="100">
+          </div>
+          <div class="col-sm-6">
+            <ul>
+              <li>@olivia2dfullest</li>
+              <li>olivia mankey</li>
+              <li>27</li>
+            </ul>
+            <a data-toggle="modal" href="#normalModal" class="btn btn-default" id="modal button">Chat!</a>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-6 text-center">
+            <img src="images/pic5.jpg" alt="Smiley face" height="100" width="100">
+          </div>
+          <div class="col-sm-6">
+            <ul>
+              <li>@harmony76574</li>
+              <li>jassica monroe</li>
+              <li>23</li>
+            </ul>
+            <a data-toggle="modal" href="#normalModal" class="btn btn-default" id="modal button">Chat!</a>
+          </div>
+        </div>
+        <hr>
+        <button class="back">go back</button>
+      </div>
+<!--
+      <div id="fakeMatches2">
+        <h2>hot chick 2</h2>
+        <hr>
+        <h2>hot chick 2</h2>
+        <hr>
+        <h2>hot chick 2</h2>
+        <hr>
+        <button class="back">go back</button>
+      </div>
+
+      <div id="fakeMatches3">
+        <h2>hot chick 3</h2>
+        <hr>
+        <h2>hot chick 3</h2>
+        <hr>
+        <h2>hot chick 3</h2>
+        <hr>
+        <button class="back">go back</button>
+      </div>
+      -->
+    </div>
+  </div>
+
+  
+<div id="normalModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+		  <div class="col-md-12">
+
+					<div class="panel panel-default" id="textbox">
+						<div class="panel-heading">
+							<h3 class="panel-title">Live Chat</h3>
+						</div>
+
+						<div class="panel-body">
+							<div id="chatbox">
+								<div id="modal-results"></div>
+								<div class="form-group">
+								</div>
+
+							</div>
+							<label for="usr">Name:</label>
+							<input placeholder="Enter Username" type="text" class="form-control" id="username">
+
+
+							<div class="form-group">
+								<label for="comment">Message</label>
+								<textarea class="form-control" rows="5" id="text"></textarea>
+							</div>
+
+							<div class="btn-group" role="group" aria-label="...">
+								<button id="post" type="button" class="btn btn-default">Submit</button>
+							</div>
+
+						</div>	
+					</div>
+</div>
+		
+        <iframe frameborder="0" scrolling="no" width="700" height="700" src="http://google.about.com/b/2013/04/01/google-nose.htm">
+        </iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+</body>
+
+</html>
